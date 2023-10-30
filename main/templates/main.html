@@ -1,0 +1,246 @@
+<html>
+
+<head>
+	
+    <link rel='stylesheet' href="{{url_for('static', filename='fa/css/all.min.css')}}">
+
+
+    <link rel='stylesheet' href="{{url_for('static', filename='bulma/css/bulma.css')}}">
+
+    <script src="{{url_for('static', filename='mine.js')}}"></script>
+
+</head>
+
+
+
+
+<body style="margin-left: 15px;">
+	
+
+	<h1 class="title">{{name}}</h1>
+	
+
+	
+
+
+<div class="columns">
+
+
+	<div class="column">
+	
+	
+
+
+
+<div class="tabs is-toggle is-fullwidth">
+  <ul>
+    <li id="li1" class="is-active">
+      <a onclick="ulshow();">
+        <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+        <span>Ultrasound</span>
+
+       
+
+
+      </a>
+    </li>
+    
+    <li id="li2">
+      <a onclick="feedshow();">
+        <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+        <span>Overview Video</span>
+
+      </a>
+    </li>
+</ul>
+</div>
+
+
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+
+    <div id="im1" style="">	
+	 <img style="margin-top: 15px;" src ="https://upload.wikimedia.org/wikipedia/commons/c/c7/CRL_
+		Crown_rump_length_12_weeks_ecografia_Dr._Wolfgang_Moroder.jpg" class="dispimg_us">
+	</div>
+
+<div style="display: none;" id="im2">
+	<img src="{{ url_for('video_feed') }}" class="dispimg_ov" >
+</div>
+
+
+	</figure>
+</div>
+</div>
+
+
+
+
+
+
+	</div> 
+	<div class="column">
+<div class="container mb-4">
+<button class="button is-primary is-medium" onclick="document.location.href='/scanpath';">
+
+		<span class="icon">
+			<i class="fa fa-notes-medical"></i>
+		</span>
+			   	<span>Scan</span>
+
+	</button>
+
+	<button class="button is-primary is-medium" onclick="document.location.href='/multipath';">
+
+		<span class="icon">
+			<i class="fa fa-notes-medical"></i>
+		</span>
+			   	<span>Multi path (2)</span>
+
+	</button>
+
+		<button class="button is-primary" onclick="document.location.href='/main';">
+	
+			   	<span>Save settings</span>
+
+	</button>
+
+
+</div>
+
+<div class="container mb-4">
+	<h2 class="subtitle">Automatic controls </h2>
+
+
+	<div class="buttons has-addons">
+		<button class="button has-background-light" onclick="initrequest();">Initialize</button>
+
+		<button class="button has-background-light" onclick="document.location.href='/main';">Center X, Zero Y</button>
+	</div>
+</div>
+	<span style="margin-top: 5px;"> </span>
+<div class="container mb-4">
+	<h2 class="subtitle">Manual adjustments</h2>
+
+		<p>Container: Height (z-axis), step 5mm</p>
+			<div class="buttons has-addons">
+			  <button class="button has-background-light" onclick="PlateUp();">
+			  	
+			  	<span class="icon">
+					<i class="fa fa-arrow-up"></i>
+			   	</span>
+
+
+			   	<span>Up</span>
+
+			  </button>
+		  	  <button class="button has-background-light" onclick="PlateDown();">
+			  	
+			  	<span class="icon">
+					<i class="fa fa-arrow-down"></i>
+			   	</span>
+			   	<span>Down</span>
+
+
+		  	  </button>
+
+
+			</div>
+
+					<p>Probe: Far-Close (y-axis), step 2mm</p>
+			<div class="buttons has-addons">
+			  <button class="button has-background-light" onclick="Yminus();">
+			  	
+			  	<span class="icon">
+					<i class="fa fa-arrow-up"></i>
+			   	</span>
+
+
+			   	<span>Probe Further</span>
+
+			  </button>
+		  	  <button class="button has-background-light" onclick="Yplus();">
+			  	
+			  	<span class="icon">
+					<i class="fa fa-arrow-down"></i>
+			   	</span>
+			   	<span>Probe Nearer</span>
+
+
+		  	  </button>
+
+
+			</div>
+
+</div>
+<div class="container mb-4">	
+		<p>Gain</p>
+			<div class="buttons has-addons">
+			  <button class="button has-background-light">
+				  	<span class="icon">
+						<i class="fa fa-plus"></i>
+				   	</span>
+				  	<span>Increase</span>
+				</button>
+
+
+		  	  <button class="button has-background-light">
+		  	  	<span class="icon">
+					<i class="fa fa-minus"></i>
+			   	</span>
+			  	<span>Decrease</span>
+
+		  	  </button>
+		  
+		    </div>
+</div>
+
+
+<!--
+	Theresa's code starts here
+	-->
+<div class="container mb-4">
+	<p>Process Scan</p>
+		<div class="buttons has-addons">
+			<button class="button has-background-light", onclick="Process();">
+				<span class="icon">
+					<i class="fa fa-folder"></i>
+				</span>
+				<span>Create dicom series</span>
+			</button>
+</div>
+
+<!--
+	Theresa's code ends here
+	-->
+
+<div class="container">
+	<p>System</p>
+	<div class="buttons has-addons">
+			<button class="button is-danger" onclick="document.location.href='/main';">
+			
+		  	<span class="icon">
+				<i class="fa fa-power-off"></i>
+		   	</span>
+		   	<span>Shutdown</span>
+
+
+		</button>
+
+
+	</div>
+</div>
+		    </div>
+		</div>
+	</div>
+
+
+</div>
+
+
+
+</body>
+
+
+</html>

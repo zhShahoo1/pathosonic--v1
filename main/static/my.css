@@ -1,0 +1,64 @@
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #b5d2b9; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  height: 55px;
+  width: 165px;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+
+
+}.button_SD {
+  background-color: c18989; 
+  color: black; 
+  border: 2px solid #af3131;
+}
+
+.button_SD:hover {
+  background-color: #e82828;
+  color: white;
+}
+
+
+
+.controls{
+  margin: 50px;
+  width:60%;
+}
+
+
+.dispimg_us{
+  width:60%;"
+}
+
+.dispimg_ov{
+  width:30%;"
+}

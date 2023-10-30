@@ -1,0 +1,22 @@
+<html>
+
+<head>
+	<title>Welcome to {{title}}</title>
+	    
+</head>
+
+<body>
+
+
+	<h2>Instructions</h2>
+	 
+	 {% for element in instr_list %}
+    	  <p style="margin-left: 50px;" >{{ element }} </p>
+ 	 {% endfor %}
+
+
+<button class="button button1" onclick="document.location.href='/main';">Confirm</button>
+</body>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='my.css')}}">
+</html>

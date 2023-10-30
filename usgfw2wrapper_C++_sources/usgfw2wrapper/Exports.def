@@ -1,0 +1,18 @@
+LIBRARY	"usgfw2wrapper"
+;
+;contains the list of functions that are being exported from this DLL
+;
+
+EXPORTS   
+     
+        init_ultrasound_usgfw2  PRIVATE
+        find_connected_probe    PRIVATE
+        data_view_function      PRIVATE
+        mixer_control_function  PRIVATE
+        return_pixel_values     PRIVATE
+        get_resolution          PRIVATE
+        Freeze_ultrasound_scanning PRIVATE
+        Run_ultrasound_scanning PRIVATE 
+        Close_and_release       PRIVATE 
+        on_init                 PRIVATE
+        Stop_ultrasound_scanning PRIVATE
